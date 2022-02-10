@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tin tức E-Sport</title>
+<link rel="stylesheet" type="text/css" href="css.css">
+<script language="javascript">
+function baomat()	
+{
+	var Stt;
+	var mk=document.getElementById("mk");
+	if(mk.value.length>=18)
+		{Stt=5;}
+	else if(mk.value.length>=15)
+		{Stt=4;}
+		else if(mk.value.length>=12)
+			{Stt=3;}
+			else if(mk.value.length>=6)
+				{Stt=2;}
+				else
+				{Stt=1;}
+	document.Dang_Ki.anh.src=Stt+'.jpg';
+}
+function a()
+{   
+  	var ho = window.document.Dang_Ki.ho.value;
+	var ns = window.document.Dang_Ki.namsinh.value;
+	var tk = window.document.Dang_Ki.tk.value;
+	var mk = window.document.Dang_Ki.mk.value;
+	var nlmk = window.document.Dang_Ki.nlmk.value;
+	var gmail = window.document.Dang_Ki.gmail.value;
+	var da = window.document.Dang_Ki.da.value;
+	if(ho.length == 0)
+	{
+		 alert("vui lòng nhập tên ");
+ 	window.document.Dang_Ki.ho.focus(); return false;
+	}
+	if(ns.length==0)
+	{ 
+	
+ 	
+	alert("vui lòng nhập năm ");
+ 	window.document.Dang_Ki.namsinh.focus(); return false;
+	}
+	if(isNaN(ns)==true)
+	{
+		 alert("Năm sinh không hợp lệ");
+		 window.document.Dang_Ki.namsinh.value="";
+		 document.Dang_Ki.namsinh.focus();
+		  return false;
+     }
+	  if(ns <1900)
+	 {
+	 alert("Năm sinh không hợp lệ");
+	 window.document.Dang_Ki.namsinh.value="";
+	 document.Dang_Ki.namsinh.focus();
+	 return false;
+	}
+	 if(ns >2020)
+	 {
+	 alert("Năm sinh không hợp lệ");
+	 window.document.Dang_Ki.namsinh.value="";
+	 document.Dang_Ki.namsinh.focus();
+	 return false;
+	}
+	if(tk.length==0)
+	{ 
+	alert("vui lòng nhập tên tài khoản ");
+ 	window.document.Dang_Ki.tk.focus(); return false;
+	}
+	if(mk.length<6)
+	{ 
+	alert("Mật khẩu phải trên 6 kí tự ");
+ 	window.document.Dang_Ki.mk.focus(); return false;
+	}
+	if(mk != nlmk)
+	{
+	alert("mật khẩu và nhập lại mật khẩu ko trùng nhau"); 
+	 window.document.Dang_Ki.nlmk.focus();
+	return false;
+		  }
+	if(gmail.length == 0)
+	{
+	alert("vui lòng nhập gmail ");
+ 	window.document.Dang_Ki.gmail.focus(); return false;
+	}
+	if(da.length == 0)
+	{
+	alert("vui lòng nhập đán án  ");
+ 	window.document.Dang_Ki.da.focus(); return false;
+	}
+	alert("Đăng ký thành công! Chúc mừng bạn"); return true
+	}
+</script>
+</head>
+<body bgcolor="#CCCCCC">
+<div class="header">
+<p><img src="biadenaa.jpg" width="100%" height="200" /></p>
+</div>
+<div class="left">
+    <div class="otrai1">
+<div class="otrai"><a href="TrangTop.html"><img src="hinhlanetop.jpg" width="100%" height="134" /></a>
+</div>
+<div class="otrai"><a href="TrangRung.html"><img src="Rungdasua.jpg" width="100%" height="134" /></a>
+</div>
+<div class="otrai"><a href="TrangMid.html"><img src="midlanedasua.jpg" width="100%" height="134" /></a>
+</div>
+<div class="otrai"><a href="TrangAd.html"><img src="AD.jpg" width="100%" height="134" /></a>
+</div>
+<div class="otrai"><a href="TrangSp.html"><img src="spdasua1.jpg" width="100%" height="134" /></a>
+</div>
+</div>
+</div>
+<div class="middle">
+<div id="middle1">
+  <p><font size="4" color="#3366FF"><marquee behavior="alternate" align="right">Với một tài khoản.... bạn có thể nhận mọi thông tin về trò chơi 1 cách sớm nhất</marquee></font></p>
+  <h1 align="center"><font color="#FF0033"> Đăng Kí Thành Viên </font></h1>
+<form action="" method="post" id="Dang_Ki" name="Dang_Ki" onsubmit="return a();" >
+<table width="56%" border="0" cellspacing="1" cellpadding="1" align="center"  >
+  <tr>
+    <td height="31" colspan="2" align="left">Thông tin thành viên</td>
+    </tr>
+  <tr>
+    <td width="30%" height="31" align="right">Họ và tên </td>
+    <td width="70%"><label for="ho"></label>
+      <input type="text" name="ho" id="ho" placeholder="Họ và tên"   />
+     </td>
+  </tr>
+  <tr>
+    <td height="32" align="right">Giới tính </td>
+    <td><label for="gt"></label>
+      <select name="gt" id="gt">
+        <option>Nam</option>
+        <option>Nữ</option>
+        <option>Khác</option>
+      </select></td>
+  </tr>
+  <tr>
+    <td height="31" align="right">Năm sinh </td>
+    <td><label for="namsinh"></label>
+      <input type="text" name="namsinh" id="namsinh" placeholder="Năm sinh" /></td>
+  </tr>
+
+  <tr>
+    <td height="31" colspan="2">Thông tin tài khoản</td>
+  </tr>
+  <tr>
+    <td height="31" align="right">Tên tài khoản </td>
+    <td><label for="tk"></label>
+      <input type="text" name="tk" id="tk" /></td>
+  </tr>
+  <tr>
+    <td height="31" align="right">Mật khẩu </td>
+    <td><label for="mk"></label>
+      <input type="password" name="mk" id="mk" onkeyup="baomat();" />
+      <img src="1.jpg" width="73" height="35" id="anh" /></td>
+  </tr>
+  <tr>
+    <td height="33" align="right">Nhập lại mật khẩu </td>
+    <td><label for="nlmk"></label>
+      <input type="password" name="nlmk" id="nlmk" /></td>
+  </tr>
+  <tr>
+    <td height="31" colspan="2" align="left">Bảo vệ tài khoản</td>
+    </tr>
+  <tr>
+    <td height="30" align="right">Gmail </td>
+    <td><label for="textfield"></label>
+      <input type="text" name="gmail" id="gmail" />
+      @
+      <label for="duoigmail"></label>
+      <select name="duoigmail" id="duoigmail">
+        <option>gmail.com</option>
+        <option>yahoo.com</option>
+      </select></td>
+  </tr>
+  <tr>
+    <td height="31" align="right">Câu hỏi bảo mật </td>
+    <td><label for="cauhoi1"></label>
+      <select name="cauhoi1" id="cauhoi1">
+        <option>Bạn ghét điều gì nhất?</option>
+        <option>Bạn thường làm gì khi rảnh rỗi?</option>
+        <option>Ca sĩ nào là thần tượng của bạn?</option>
+        <option>Món ăn bạn ưa thích nhất?</option>
+        <option>Môn thể thao yêu thích của bạn là gì?</option>
+        <option>Người quan trọng nhất của bạn là ai?</option>
+        <option>Người bạn thân nhất của bạn là ai?</option>
+        <option>Tên trường THPT của bạn là gì?</option>
+        <option>Ước mơ của bạn là gì?</option>
+        <option>Bạn gặp vợ(chồng) mình ở đâu?</option>
+      </select></td>
+  </tr>
+  <tr>
+    <td height="31" align="right">Đán án </td>
+    <td><label for="da"></label>
+      <input type="text" name="da" id="da" placeholder="Nhập đáp án" /></td>
+  </tr>
+  <tr>
+    <td height="37" colspan="2" align="center"><input name="Submit" type="submit" value="Tạo tài khoản" /></td>
+    </tr>
+</table>
+</form>
+
+</div>
+</div>
+<div class="right">
+<div class="ophai">
+<div class="otrai1"> <a href="Formdonggop.html"><img src="donggop.jpg" width="100%" height="52" /></a>
+</div>
+</div>
+<div class="ophai">
+<img src="skin.jpg" width="100%" height="474" />
+</div>
+<div class="ophai">
+<div class="ophai1">
+<div class="ophai11"><div class="otrai1"><img src="login.jpg" width="100%" height="75" /></div>
+</div>
+<div class="ophai11"><div class="otrai1"><a href="Formdangki.html"><img src="signup.jpg" width="100%" height="75" /></a>
+</div>
+</div>
+</div>
+<div class="ophai1"><a href="Trangdau.html"><div class="otrai1"><img src="logogocphai.jpg" width="100%" height="153" /></div></a>
+</div>
+</div>
+</div>
+</body>
+</html>
