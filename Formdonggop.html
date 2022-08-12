@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tin tức E-Sport</title>
+<link rel="stylesheet" type="text/css" href="css.css">
+<script language="javascript">
+function b()
+{
+	var ten = window.document.Dong_Gop.ten.value;
+	var namsinh = window.document.Dong_Gop.namsinh.value; 
+	var gmail = window.document.Dong_Gop.gmail.value;
+	var isOK=false;
+	var ykien = window.document.Dong_Gop.ykien.value;
+	
+	if(ten.length == 0)
+	{
+		 alert("vui lòng nhập tên ");
+ 	window.document.Dong_Gop.ten.focus(); 
+	return false;
+	}
+	if(namsinh.length == 0)
+	{
+		 alert("vui lòng nhập năm sinh ");
+ 	window.document.Dong_Gop.namsinh.focus(); 
+	return false;
+	}
+	if(isNaN(namsinh)==true)
+	{
+		 alert("Năm sinh không hợp lệ");
+		 window.document.Dong_Gop.namsinh.value="";
+		 document.Dong_Gop.namsinh.focus();
+		 return false;
+		 }
+	if(namsinh <1900)	 
+	 {
+	 alert("Năm sinh không được nhỏ hơn 1900");
+	 window.document.Dong_Gop.namsinh.value="";
+	 document.Dong_Gop.namsinh.focus();
+	 return false;
+	}
+	 if(namsinh >2020)
+	 {
+	 alert("Năm sinh không được lớn hơn 2020");
+	 window.document.Dong_Gop.namsinh.value="";
+	 document.Dong_Gop.namsinh.focus();
+	 return false;
+	}
+	 if(gmail.length == 0)
+	{
+		 alert("vui lòng nhập gmail ");
+ 	window.document.Dong_Gop.gmail.focus(); 
+	return false;
+	}
+	for(var i=0;i<window.document.Dong_Gop.danhgia.length;i++)
+  {
+   if (Dong_Gop.danhgia[i].checked==true)
+    {
+     isOK=true;
+     break;
+    }
+  }
+  if (isOK==false)
+  	{
+   alert("Vui lòng đánh giá trang web");   
+   return false;
+ 	 }
+  if ( ykien.length ==0)
+ 	{
+		 alert("Vui lòng đóng góp ý kiến ");
+		 return false;
+	}
+	alert("Cám ơn bạn đã đóng góp ý kiến ");
+} 
+</script>
+</head>
+<body bgcolor="#CCCCCC">
+<div class="header">
+<p><img src="biadenaa.jpg" width="100%" height="200" /></p>
+</div>
+<div class="left">
+    <div class="otrai1">
+<div class="otrai"><a href="TrangTop.html"><img src="hinhlanetop.jpg" width="100%" height="134" /></a>
+</div>
+<div class="otrai"><a href="TrangRung.html"><img src="Rungdasua.jpg" width="100%" height="134" /></a>
+</div>
+<div class="otrai"><a href="TrangMid.html"><img src="midlanedasua.jpg" width="100%" height="134" /></a>
+</div>
+<div class="otrai"><a href="TrangAd.html"><img src="AD.jpg" width="100%" height="134" /></a>
+</div>
+<div class="otrai"><a href="TrangSp.html"><img src="spdasua1.jpg" width="100%" height="134" /></a>
+</div>
+</div>
+</div>
+<div class="middle">
+<div id="middle1">
+  <p><font size="3" color="#3399FF"><marquee behavior="alternate" align="right">Hãy cho chúng tôi biết đánh giá của bạn về TT (^v^)</marquee></font></p>
+  <h1 align="center"><font color="#FF3300"> Đóng Góp Ý Kiến </font></h1>
+<form action="" method="post" id="Dong_Gop" name="Dong_Gop" onsubmit="return b();" ><table width="56%" border="0" cellspacing="1" cellpadding="1" align="center">
+  <tr>
+    <td width="30%" height="31" align="right">Họ Và Tên</td>
+    <td width="70%"><label for="ten"></label>
+      <input type="text" name="ten" id="ten" placeholder="Họ và tên" /></td>
+  </tr>
+  <tr>
+    <td height="31" align="right">Giới Tính</td>
+    <td><label for="gioitinh"></label>
+      <select name="gioitinh" id="gioitinh">
+        <option>Nam</option>
+        <option>Nữ</option>
+        <option>Khác</option>
+      </select></td>
+  </tr>
+  <tr>
+    <td height="31" align="right">Năm Sinh</td>
+    <td><label for="namsinh"></label>
+      <input type="text" name="namsinh" id="namsinh" placeholder="Năm sinh" /></td>
+  </tr>
+  <tr>
+    <td height="31" align="right">Gmail</td>
+    <td><label for="gmail"></label>
+      <input type="text" name="gmail" id="gmail" placeholder="gmail" />
+      @
+      <label for="duoigmail"></label>
+      <select name="duoigmail" id="duoigmail">
+        <option>gmail.com</option>
+        <option>yahoo.com</option>
+      </select></td>
+  </tr>
+  <tr>
+    <td height="31" colspan="2">Bạn thích tin tức từ TT không:</td>
+    </tr>
+  <tr>
+    <td height="28" align="right"><label for="dg"></label><input type="radio" name="danhgia" id="dg" value="Rất thích" />
+     </td>
+    <td>Rất thích</td>
+  </tr>
+  <tr>
+    <td height="28" align="right"><input type="radio" name="danhgia" id="dg" value="Thích" /></td>
+    <td>Thích</td>
+  </tr>
+  <tr>
+    <td height="28" align="right"><input type="radio" name="danhgia" id="dg" value="Bình thường" /></td>
+    <td>Bình thường</td>
+  </tr>
+  <tr>
+    <td height="28" align="right"><input type="radio" name="danhgia" id="dg" value="Không thích" /></td>
+    <td>Không thích</td>
+  </tr>
+  <tr>
+    <td height="28" align="right"><input type="radio" name="danhgia" id="dg" value="Ghét" /></td>
+    <td>Ghét</td>
+  </tr>
+  <tr>
+    <td height="31" colspan="2">Ý kiến của bạn về TT (nội dung, hướng phát triển, lỗi,...)</td>
+    </tr>
+  <tr>
+    <td height="141" colspan="2" align="center"><label for="ykien"></label>
+      <textarea name="ykien" id="ykien" cols="53%" rows="8" placeholder="nội dung"></textarea></td>
+    </tr>
+    <tr>
+    <td align="right"></td>
+    <td><input type="submit" name="donggop" id="donggop" value="Gửi" /></td>
+  </tr>
+</table>
+
+</form>
+
+</div>
+</div>
+<div class="right">
+<div class="ophai">
+<div class="otrai1"> <a href="Formdonggop.html"><img src="donggop.jpg" width="100%" height="52" /></a>
+</div>
+</div>
+<div class="ophai">
+<img src="skin.jpg" width="100%" height="474" />
+</div>
+<div class="ophai">
+<div class="ophai1">
+<div class="ophai11"><div class="otrai1"><img src="login.jpg" width="100%" height="75" /></div>
+</div>
+<div class="ophai11"><div class="otrai1"><a href="Formdangki.html"><img src="signup.jpg" width="100%" height="75" /></a>
+</div>
+</div>
+</div>
+<div class="ophai1"><a href="Trangdau.html"><div class="otrai1"><img src="logogocphai.jpg" width="100%" height="153" /></div></a>
+</div>
+</div>
+</div>
+</body>
+</html>
